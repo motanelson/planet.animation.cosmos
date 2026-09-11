@@ -44,7 +44,7 @@ namespace zlist
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Blue;
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(797, 450);
@@ -62,7 +62,7 @@ namespace zlist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Blue;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
@@ -100,7 +100,7 @@ namespace zlist
             SolidBrush rrBrush = new SolidBrush(Color.FromArgb(90, 90, 90));
             Rectangle f = new Rectangle(pictureBox1.Width / 2-150, pictureBox1.Height / 2-150, 300, 300);
             Rectangle f1 = new Rectangle(xxx-25, yyy-25, 50, 50);
-            ee.Clear(Color.FromArgb(0, 0, 255));
+            ee.Clear(Color.FromArgb(255, 255, 255));
             if (xxxx > 0)
             {
                 ee.FillEllipse(rBrush, f);
