@@ -65,7 +65,7 @@ namespace cosmosPlanet
                 
                 while (true)
                 {
-                        Thread.Sleep(2);
+                        //Thread.Sleep(2);
                      
                         tests.mainLoop();
     
@@ -109,13 +109,21 @@ namespace cosmosPlanet
                 Sys.Graphics.Point pp = new Sys.Graphics.Point((int)500, 400);
                 graf.canvas.DrawFilledEllipse(p, pp, 150, 150);
                 Sys.Graphics.Point ppp = new Sys.Graphics.Point((int)x, (int)y);
-                graf.canvas.DrawFilledRectangle(p2, ppp, 50, 50);
+                Sys.Graphics.Point ppp2 = new Sys.Graphics.Point((int)x-75, (int)y-75);
+                graf.canvas.DrawFilledRectangle(p2, ppp2, 150, 150);
+                x = x + xx;
+                if (x < 200 || x > 700) xx = -xx;
+
+
                 graf.canvas.DrawFilledEllipse(p1, ppp, 50, 50);
             }
             else
             {
                 Sys.Graphics.Point ppp = new Sys.Graphics.Point((int)x, (int)y);
                 graf.canvas.DrawFilledRectangle(p2, ppp, 50, 50);
+                x = x + xx;
+                if (x < 200 || x > 700) xx = -xx;
+
                 graf.canvas.DrawFilledEllipse(p1, ppp, 50, 50);
                 Sys.Graphics.Point pp = new Sys.Graphics.Point((int)500, 400);
                 graf.canvas.DrawFilledEllipse(p, pp, 150, 150);
@@ -123,8 +131,6 @@ namespace cosmosPlanet
 
 
             }
-            x = x + xx;
-            if (x < 200 || x > 700) xx = -xx;
             graf.displays();
 
 
