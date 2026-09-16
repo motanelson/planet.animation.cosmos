@@ -19,25 +19,14 @@ namespace cosmosPlanet
         public static Canvas canvas;
         public static Bitmap bitmap;
 
-        public static void Points(int x, int y)
-        {
-
-
-            Pen p = new Pen(Color.FromArgb(0, 0, 0));
-            canvas.DrawPoint(p, x, y);
-
-
-
-
-
-        }
+        
 
         public static void starts()
         {
 
 
             canvas = FullScreenCanvas.GetFullScreenCanvas();
-            
+            canvas.Clear(Color.White);
 
 
 
@@ -109,7 +98,7 @@ namespace cosmosPlanet
 
             Pen p = new Pen(Color.Black, 1);
             Pen p1 = new Pen(Color.Gray, 1);
-            graf.canvas.Clear(Color.White);
+            Pen p2 = new Pen(Color.White, 1);
 
 
 
@@ -120,11 +109,13 @@ namespace cosmosPlanet
                 Sys.Graphics.Point pp = new Sys.Graphics.Point((int)500, 400);
                 graf.canvas.DrawFilledEllipse(p, pp, 150, 150);
                 Sys.Graphics.Point ppp = new Sys.Graphics.Point((int)x, (int)y);
+                graf.canvas.DrawFilledRectangle(p2, ppp, 50, 50);
                 graf.canvas.DrawFilledEllipse(p1, ppp, 50, 50);
             }
-            else 
+            else
             {
-                Sys.Graphics.Point ppp = new Sys.Graphics.Point((int)x,(int)y);
+                Sys.Graphics.Point ppp = new Sys.Graphics.Point((int)x, (int)y);
+                graf.canvas.DrawFilledRectangle(p2, ppp, 50, 50);
                 graf.canvas.DrawFilledEllipse(p1, ppp, 50, 50);
                 Sys.Graphics.Point pp = new Sys.Graphics.Point((int)500, 400);
                 graf.canvas.DrawFilledEllipse(p, pp, 150, 150);
@@ -135,8 +126,8 @@ namespace cosmosPlanet
             x = x + xx;
             if (x < 200 || x > 700) xx = -xx;
             graf.displays();
-            
-            
+
+
         }
 
     }
